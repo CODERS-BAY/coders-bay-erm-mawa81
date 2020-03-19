@@ -14,6 +14,8 @@ Group Solution:
 
 ## second solution:
 
+![ERM](codersbayERM.jpg)
+
 ### textual notation:
 
 * participant ( **participantID**:INT, firstname:VARCHAR(32), lastname:VARCHAR(32), email:VARCHAR(32), 
@@ -25,7 +27,7 @@ address:VARCHAR(32), city:VARCHAR(32), postalcode:INT )
 * subject ( **subjectID**:INT, title:VARCHAR(32) )
 
 * course ( **courseID**:INT, title:VARCHAR(32), maxnumberofparticipants:INT , courseleader:INT, 
-roomNr:INT, startdate:DATE, enddate:DATE )
+roomNr:INT )
 
 * employee ( **employeeID**, firstname:VARCHAR(32), lastname:VARCHAR(32), email:VARCHAR(32), 
 address:VARCHAR(32), city:VARCHAR(32), postalcode:INT, role:VARCHAR(32))
@@ -34,8 +36,9 @@ address:VARCHAR(32), city:VARCHAR(32), postalcode:INT, role:VARCHAR(32))
 
 * equipmentmanagement ( *serialNR*:INT, *participantID*:INT, dateofreceive:DATE, dateofreturn:DATE, *lendingadministrator*:INT)
 
-* participants_in_courses ( *courseID*:INT, *participantID*:INT)
+* participants_in_courses ( *courseID*:INT, *participantID*:INT, startdate:DATE, enddate:DATE )
 
 * timetable (**weekday**:VARCHAR(32), *subjectID*:INT, *courseID*:INT, *trainerID*:INT, starttime:TIME, endtime:TIME )
 
-* coursemanagement ( )
+
+[DB Schema as pdf](CodersBayDB.pdf)
